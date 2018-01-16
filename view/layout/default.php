@@ -6,22 +6,7 @@
     <link rel="stylesheet" href="http://twitter.github.com/bootstrap/assets/css/bootstrap-1.2.0.min.css">
     </head> 
     <body>       
-      
-        <div class="topbar" style="position:static"> 
-          <div class="topbar-inner"> 
-            <div class="container"> 
-              <h3><a href="#">Mon site</a></h3> 
-              <ul class="nav"> 
-                <?php $pagesMenu = $this->request('Pages','getMenu'); ?>
-                <?php foreach($pagesMenu as $p): ?>
-                    <li><a href="<?php echo Router::url('pages/view/id:'.$p->id.'/slug:'.$p->slug); ?>" title="<?php echo $p->name; ?>"><?php echo $p->name; ?></a></li> 
-                <?php endforeach; ?>
-                <li><a href="<?php echo Router::url('posts/index'); ?>">Actualité</a></li>
-              </ul>
-            </div> 
-          </div> 
-        </div> 
- 
+
         <div class="container" style="padding-top:60px;">
             <?php echo $this->Session->flash(); ?>
         	<?php echo $content_for_layout; ?>

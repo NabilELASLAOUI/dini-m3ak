@@ -6,7 +6,7 @@ class Model{
 	public $conf = 'default';
 	public $table = false; 
 	public $db; 
-	public $primaryKey = 'id'; 
+	public $primaryKey = 'ID'; 
 	public $id; 
 	public $errors = array();
 	public $form; 
@@ -83,7 +83,7 @@ class Model{
 	* @param $req Tableau contenant les éléments de la requête
 	**/
 	public function find($req = array()){
-		$sql = 'SELECT ';
+		$sql = 'SELECT';
 
 		if(isset($req['fields'])){
 			if(is_array($req['fields'])){
@@ -113,7 +113,7 @@ class Model{
 				$cond = array(); 
 				foreach($req['conditions'] as $k=>$v){
 					if(!is_numeric($v)){
-						$v = '"'.mysql_escape_string($v).'"'; 
+						$v = '"'.addslashes($v).'"'; 
 					}
 					
 					$cond[] = "$k=$v";
@@ -131,7 +131,6 @@ class Model{
 		if(isset($req['limit'])){
 			$sql .= ' LIMIT '.$req['limit'];
 		}
-
 		$pre = $this->db->prepare($sql); 
 		$pre->execute(); 
 		return $pre->fetchAll(PDO::FETCH_OBJ);
@@ -176,6 +175,7 @@ class Model{
 	**/	
 	public function delete($id){
 		$sql = "DELETE FROM {$this->table} WHERE {$this->primaryKey} = $id";
+		var_dump($sql);
 		$this->db->query($sql); 
 	}
 

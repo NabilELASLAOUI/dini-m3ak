@@ -63,7 +63,7 @@ class Controller{
 	**/
 	function loadModel($name){
 		if(!isset($this->$name)){
-			$file = ROOT.DS.'model'.DS.$name.'.php'; 
+			$file = ROOT.DS.'model'.DS.$name.'.php';
 			require_once($file);
 			$this->$name = new $name();
 			if(isset($this->Form)){
