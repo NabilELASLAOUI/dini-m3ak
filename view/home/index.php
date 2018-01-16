@@ -578,7 +578,7 @@
                         <form action="" novalidate autocomplete="off" class="idealforms login">
 
                             <div class="log-header">
-                                <span class="log-in">Log in</span>
+                                <span class="log-in">Connexion</span>
                             </div>
 
                             <div class="field">
@@ -592,7 +592,7 @@
                             </div>
 
                             <div class="field buttons">
-                                <button type="submit" class="submit btn green-color">Log in</button>
+                                <button type="submit" class="submit btn green-color">Connexion</button>
                             </div>
 
                             <a href="#" class="log-twitter twitter"><i class="fa fa-twitter"></i>Twitter</a>
@@ -616,34 +616,46 @@
                     </div>
 
                     <div class="modal-body">
-                        <form action="" novalidate autocomplete="off" class="idealforms reg">
+                        <form action="<?php echo Router::url('personne/ajouter'); ?>" method="post" novalidate autocomplete="off" class="idealforms reg">
 
                             <div class="log-header">
-                                <span class="log-in">Sign up</span>
+                                <span class="log-in">Inscription</span>
                             </div>
 
                             <div class="field">
-                                <input name="username" type="text" placeholder="Username">
+                                <input name="NOM" type="text" placeholder="nom">
+                                <span class="error"></span>
+                            </div>
+                            <div class="field">
+                                <input name="PRENOM" type="text" placeholder="prenom">
+                                <span class="error"></span>
+                            </div>
+                             <div class="field">
+                                <input name="DATE_NAISSANCE" type="text" placeholder="date naissance">
+                                <span class="error"></span>
+                            </div>
+                             <div class="field">
+                                <select name="SEXE">
+                                    <option value="1">Homme</option>
+                                    <option value="0">Femme</option>
+                                </select>
+                                <span class="error"></span>
+                            </div>
+                            <div class="field">
+                                <input name="TELE" type="text" placeholder="num téléphone">
+                                <span class="error"></span>
+                            </div>
+                            <div class="field">
+                                <input name="EMAIL" type="email"  placeholder="E-Mail">
                                 <span class="error"></span>
                             </div>
 
                             <div class="field">
-                                <input name="email" type="email"  placeholder="E-Mail">
+                                <input type="password" name="PASSWORD" placeholder="Password">
                                 <span class="error"></span>
                             </div>
-
-                            <div class="field">
-                                <input type="password" name="password" placeholder="Password">
-                                <span class="error"></span>
-                            </div>
-
-                            <div class="field">
-                                <input name="confirmpass" type="password"  placeholder="Password">
-                                <span class="error"></span>
-                            </div>
-
                             <div class="field buttons">
-                                <button type="submit" class="submit btn green-color">Sign up</button>
+                                <button type="submit" class="submit btn green-color">Valider</button>
                             </div>
 
                             <div class="clearfix"></div>
