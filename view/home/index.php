@@ -621,23 +621,24 @@
                             <div class="log-header">
                                 <span class="log-in">Inscription</span>
                             </div>
-                            <div class="field">
-                                <input name="NOM"  type="text" placeholder="nom">
-                                <span class="error"></span>
-                            </div> 
-                            <div class="field">
-                                <input name="PRENOM" type="text"  placeholder="prenom">
-                                <span class="error"></span>
+                           <div class="form-group" for="civilities">
+                              <select class="c-select">
+                                  <option selected>Sexe</option>
+                                  <option value="1">Homme</option>
+                                  <option value="0">Femme</option>
+                              </select>
                             </div>
-                             <div class="field">
-                                <input name="DATE_NAISSANCE" type="text" placeholder="date naissance">
-                                <span class="error"></span>
-                            </div>
-                             <div class="radio">
-                                    <label class="radio-inline"> <input type="radio" value="0"  name="SEXE">Femme</label>
-                                    <label class="radio-inline"><input type="radio" value="1" name="SEXE">Homme</label></div>
-                                <span class="error"></span>
-                            </div>
+                              
+                              <div class="field">
+                                <label class="sr-only" for="Nom" >Nom</label>
+                                <input type="text" class="form-control" id="Nom" placeholder="Nom" >
+                              </div>
+                              
+                              <div class="form-group" >
+                                <label class="sr-only" for="Prenom" > Prenom</label>
+                                <input type="text" class="form-control" id="Prenom" placeholder="Prenom">
+                              </div>
+  
                             <div class="field">
                                 <input name="EMAIL" type="email"  placeholder="E-Mail">
                                 <span class="error"></span>
