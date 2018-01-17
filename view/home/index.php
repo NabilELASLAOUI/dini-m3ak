@@ -622,7 +622,7 @@
                                 <span class="log-in">Inscription</span>
                             </div>
                            <div class="form-group" for="civilities">
-                              <select class="c-select">
+                              <select name="SEXE" class="c-select">
                                   <option selected>Sexe</option>
                                   <option value="1">Homme</option>
                                   <option value="0">Femme</option>
@@ -631,12 +631,12 @@
                               
                               <div class="field">
                                 <label class="sr-only" for="Nom" >Nom</label>
-                                <input type="text" class="form-control" id="Nom" placeholder="Nom" >
+                                <input type="text" name="NOM" class="form-control" id="Nom" placeholder="Nom" >
                               </div>
                               
                               <div class="form-group" >
                                 <label class="sr-only" for="Prenom" > Prenom</label>
-                                <input type="text" class="form-control" id="Prenom" placeholder="Prenom">
+                                <input type="text" name="PRENOM" class="form-control" id="Prenom" placeholder="Prenom">
                               </div>
   
                             <div class="field">

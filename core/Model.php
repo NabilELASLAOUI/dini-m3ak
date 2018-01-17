@@ -207,7 +207,7 @@ class Model{
 		$pre = $this->db->prepare($sql); 
 		$pre->execute($d);
 		if($action == 'insert'){
-			$this->id = $this->db->lastInsertId(); 
+		$this->id = $this->db->lastInsertId(); 
 		}
 	}
 

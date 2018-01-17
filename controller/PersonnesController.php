@@ -5,8 +5,8 @@ class PersonnesController extends Controller{
 	* ajouter un conducteur ou passager
 	**/
 	function ajouter(){
+
 		$this->loadModel('Personne'); 
-		
 		if($this->request->data){
  			if($this->Personne->validates($this->request->data)){
 
@@ -27,7 +27,7 @@ class PersonnesController extends Controller{
 									$this->Personne->save($this->request->data);
 
 									$uid = $this->Personne->last_insert();
-									mail($this->request->data->EMAIL, "Confirmation de votre compte", "Afin de valider votre compte merci de cliquer sur ce lien \n \nhttp://localhost/dini-m3ak/personne/confirm.php?id=$uid&CODE_ACTIVATION=$token");
+									mail($this->request->data->EMAIL, "Confirmation de votre compte", "Afin de valider votre compte merci de cliquer sur ce lien \n \nhttp://localhost/dini-m3ak/personnes/confirm/$uid/$token");
 									$this->Session->setFlash('La Personne a bien été ajoutée'); 
  				}
 				$this->redirect(''); 
@@ -42,5 +42,19 @@ class PersonnesController extends Controller{
 		}
 		$d['id'] = $id; 
 		$this->set($d);
+	}
+
+	function 	confirm($id,$token)
+	{
+		$this->loadModel('Personne'); 
+		$personne = $this->Personne->findFirst(array(
+			'conditions'     => array('id' =>$id)
+		));
+		//$data = array('ID'=> $id,'ETAT_COMPTE' => '1', 'CODE_ACTIVATION' => 'NULL');
+		$personne->ETAT_COMPTE = '1';
+		$personne->CODE_ACTIVATION = 'NULL';
+		$this->Personne->save($personne);
+		$this->Session->setFlash('Votre compte a bien été activé'); 
+		$this->redirect('');
 	}
 }
