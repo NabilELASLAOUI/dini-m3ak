@@ -211,4 +211,9 @@ class Model{
 		}
 	}
 
+	function 	last_insert()
+	{
+		return $user_id = $this->db->lastInsertId();
+	}
+
 }

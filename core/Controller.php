@@ -104,6 +104,12 @@ class Controller{
 		header("Location: ".Router::url($url)); 
 	}
 
+	function  str_random($length)
+	{
+		$alphabet = "azertyuiopqsdfghjklmwxcvbnmAZERTYUIOPQSDFGHJKLMWXCVBN0123456789";
+		return substr(str_shuffle(str_repeat($alphabet, $length)), 0, $length);
+		die();
+	}
 
 }
 ?>

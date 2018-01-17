@@ -621,28 +621,21 @@
                             <div class="log-header">
                                 <span class="log-in">Inscription</span>
                             </div>
-
                             <div class="field">
-                                <input name="NOM" type="text" placeholder="nom">
+                                <input name="NOM"  type="text" placeholder="nom">
                                 <span class="error"></span>
-                            </div>
+                            </div> 
                             <div class="field">
-                                <input name="PRENOM" type="text" placeholder="prenom">
+                                <input name="PRENOM" type="text"  placeholder="prenom">
                                 <span class="error"></span>
                             </div>
                              <div class="field">
                                 <input name="DATE_NAISSANCE" type="text" placeholder="date naissance">
                                 <span class="error"></span>
                             </div>
-                             <div class="field">
-                                <select name="SEXE">
-                                    <option value="1">Homme</option>
-                                    <option value="0">Femme</option>
-                                </select>
-                                <span class="error"></span>
-                            </div>
-                            <div class="field">
-                                <input name="TELE" type="text" placeholder="num téléphone">
+                             <div class="radio">
+                                    <label class="radio-inline"> <input type="radio" value="0"  name="SEXE">Femme</label>
+                                    <label class="radio-inline"><input type="radio" value="1" name="SEXE">Homme</label></div>
                                 <span class="error"></span>
                             </div>
                             <div class="field">
