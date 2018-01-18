@@ -9,7 +9,6 @@ class PersonnesController extends Controller{
 		$this->loadModel('Personne'); 
 		if($this->request->data){
  			if($this->Personne->validates($this->request->data)){
-
  				$personne = $this->Personne->findFirst(array(
 				'conditions' => array('EMAIL'=>$this->request->data->EMAIL)
 				));
@@ -19,7 +18,9 @@ class PersonnesController extends Controller{
  					$this->Session->setFlash('Cet email déjà utilisé pour un autre compte'); 
  					
  				}else{
-					$this->request->data->PASSWORD = sha1($this->request->data->PASSWORD);
+ 					if (($this->request->data->PASSWORD == $this->request->data->PASSWORD_CONFIRM) && !empty($this->request->data->EMAIL)) {
+ 						$this->request->data->PASSWORD = sha1($this->request->data->PASSWORD);
+						$this->request->data->PASSWORD_CONFIRM = sha1($this->request->data->PASSWORD_CONFIRM);
 									$token = $this->str_random(60);
 									$this->request->data->ETAT_COMPTE = '0';
 									$this->request->data->DATE_INSCRIPTION	=  date("Y-m-d H:i:s");
@@ -29,6 +30,10 @@ class PersonnesController extends Controller{
 									$uid = $this->Personne->last_insert();
 									mail($this->request->data->EMAIL, "Confirmation de votre compte", "Afin de valider votre compte merci de cliquer sur ce lien \n \nhttp://localhost/dini-m3ak/personnes/confirm/$uid/$token");
 									$this->Session->setFlash('La Personne a bien été ajoutée'); 
+ 					}else{
+ 						$this->Session->setFlash('Merci de corriger vos informations','error');
+ 					}
+									
  				}
 				$this->redirect(''); 
 			}else{

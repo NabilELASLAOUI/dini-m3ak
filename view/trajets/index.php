@@ -6,7 +6,7 @@
 
         <!-- Basic Page Needs -->
         <meta charset="utf-8">
-        <title>dini m3ak</title>
+        <title>My ride - Rides</title>
         <meta name="description" content="">
         <meta name="author" content="">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -56,10 +56,10 @@
                             <div class="user-log">
 
                                 <a data-toggle="modal" data-target="#loginModal">
-                                    Connexion
+                                    Log in
                                 </a> /
                                 <a data-toggle="modal" data-target="#regModal">
-                                    Inscription
+                                    Sign up
                                 </a>
 
                             </div><!-- end .user-log -->
@@ -94,7 +94,7 @@
 
             <div class="main-baner">
 
-                <div class="fullscreen background parallax clearfix" style="background-image:url('img/tumblr_n7yhhvUQtx1st5lhmo1_1280.jpg');" data-img-width="1600" data-img-height="1064">
+                <div class="background parallax clearfix" style="background-image:url('img/tumblr_n7yhhvUQtx1st5lhmo1_1280.jpg');" data-img-width="1600" data-img-height="1064">
 
                     <div class="main-parallax-content">
 
@@ -109,19 +109,21 @@
                                         <div class="col-md-4 col-sm-12 col-xs-12">
 
                                             <div class="logo">
-                                                <h1>dini m3ak</h1>
+                                                <h1>My ride</h1>
                                             </div><!-- end .logo -->
+
                                         </div><!-- end .col-sm-4 -->
+
                                         <div class="col-md-8 col-sm-8 col-xs-12">
 
                                             <nav id="nav" class="main-navigation">
 
                                                 <ul class="navigation">
                                                     <li>
-                                                        <a href="<?php echo Router::url(''); ?>">Accueil</a>
+                                                        <a href="index.html">Home</a>
                                                     </li>
                                                     <li>
-                                                        <a href="<?php echo Router::url('trajet'); ?>">Trajet</a>
+                                                        <a href="rides.html">rides</a>
                                                     </li>
                                                     <li>
                                                         <a href="add-ride.html">Submit</a>
@@ -158,6 +160,84 @@
 
                             </section><!-- end .container -->
 
+                            <div class="col-md-12 col-sm-12 col-xs-12">
+
+                                <div class="search-content">
+
+                                    <form action="" novalidate autocomplete="off" class="idealforms searchtours">
+
+                                        <div class="row">
+
+                                            <div class="col-md-3 col-sm-3 col-xs-12">
+                                                <div class="field">
+                                                    <select id="destination" name="destination">
+                                                        <option value="default">From</option>
+                                                        <option>Sofia</option>
+                                                        <option>Plovdiv</option>
+                                                        <option>Hamburg</option>
+                                                        <option>Milano</option>
+                                                        <option>Paris</option>
+                                                        <option>Madrid</option>
+                                                        <option>Berlin</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-3 col-sm-3 col-xs-12">
+
+                                                <div class="field">
+                                                    <select id="destination" name="destination">
+                                                        <option value="default">To</option>
+                                                        <option>Sofia</option>
+                                                        <option>Plovdiv</option>
+                                                        <option>Hamburg</option>
+                                                        <option>Milano</option>
+                                                        <option>Paris</option>
+                                                        <option>Madrid</option>
+                                                        <option>Berlin</option>
+                                                    </select>
+                                                </div>
+
+                                            </div>
+
+                                            <div class="col-md-3 col-sm-3 col-xs-12">
+
+                                                <div class="field">
+                                                    <input name="event" type="text" placeholder="Date" class="datepicker">
+                                                </div>
+
+
+                                            </div>
+
+                                            <div class="col-md-3 col-sm-3 col-xs-12">
+
+                                                <div class="field">
+                                                    <select id="destination" name="destination">
+                                                        <option value="default">Number of seats</option>
+                                                        <option>1</option>
+                                                        <option>2</option>
+                                                        <option>3</option>
+                                                    </select>
+                                                </div>
+
+                                            </div>
+
+                                            <div class="col-md-3 col-sm-3 col-xs-12">
+
+                                                <div class="field buttons">
+                                                    <button type="submit" class="btn btn-lg green-color">Search</button>
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+
+
+                                    </form>
+                                </div><!-- end .search-content -->
+
+                            </div><!-- end .col-sm-12 -->
+
                         </div><!-- end .second-parallax-content -->
 
                     </div><!-- end .main-parallax-content -->
@@ -173,118 +253,20 @@
             <div class="container">
                 <div class="row">
 
-                    <div class="page-content">
+                    <div class="col-md-12 col-sm-12 col-xs-12">
 
-                        <div class="services clearfix">
+                        <div class="page-sub-title textcenter">
+                            <h2>All rides</h2>
+                            <div class="line"></div>
+                        </div><!-- end .page-sub-title -->
 
-                            <div class="col-md-12 col-sm-12 col-xs-12">
+                    </div><!-- end .col-md-12 col-sm-12 col-xs-12 -->
 
-                                <div class="page-sub-title textcenter">
-                                    <h2>Services</h2>
-                                    <div class="line"></div>
-                                </div><!-- end .page-sub-title -->
+                    <div class="col-md-12 col-sm-12 col-xs-12">
 
-                            </div><!-- end .col-md-12 col-sm-12 col-xs-12 -->
+                        <div class="page-content">
 
-                            <div class="col-md-4 col-sm-4 col-xs-12">
-
-                                <article class="service">
-
-                                    <i class="fa fa-car"></i>
-
-                                    <h3>Share your ride</h3>
-                                    <p>Are you getting sick of traveling alone and spent so much money on gas? Share your ride today,and forget about this problems.</p>
-
-
-                                </article><!-- end .service -->
-
-                            </div><!-- end .col-md-4 -->
-
-                            <div class="col-md-4 col-sm-4 col-xs-12">
-
-                                <article class="service">
-
-                                    <i class="fa fa-users"></i>
-
-                                    <h3>Find new friends</h3>
-                                    <p>Finding new friends is easier than ever,nothing makes better friendship than spending few hours casually chatting with some interesting people.</p>
-
-                                </article><!-- end .service -->
-
-                            </div><!-- end .col-md-4 -->
-
-                            <div class="col-md-4 col-sm-4 col-xs-12">
-
-                                <article class="service">
-
-                                    <i class="fa fa-map-marker"></i>
-
-                                    <h3>Go to new places</h3>
-                                    <p> Find some new favourite place to chill out,you have no longer got excuse for not travelling and discovering. </p>
-
-                                </article><!-- end .service -->
-
-                            </div><!-- end .col-md-4 -->
-
-                        </div><!-- end .services -->
-
-                        <div class="clearfix"></div>
-
-                        <div class="col-md-12 col-sm-12 col-xs-12">
-
-                            <div class="background parallax" style="background-image:url('img/XWBIL5.jpg');" data-img-width="1600" data-img-height="1064">
-
-                                <div class="main-parallax-content">
-
-                                    <div class="second-parallax-content">
-
-                                        <div class="parallax-content clearfix">
-
-                                            <div class="col-md-4 col-sm-4 col-xs-12">
-                                                <div class="site-stat">
-                                                    <span class="counter">5,000</span>
-                                                    <span>Happy users</span>
-                                                </div>
-                                            </div>
-
-                                            <div class="col-md-4 col-sm-4 col-xs-12">
-                                                <div class="site-stat">
-                                                    <span class="counter">7,000</span>
-                                                    <span>Successful rides</span>
-                                                </div>
-                                            </div>
-
-                                            <div class="col-md-4 col-sm-4 col-xs-12">
-                                                <div class="site-stat">
-                                                    <span class="counter">600,000</span>
-                                                    <span>Miles traveled in a good company</span>
-                                                </div>
-                                            </div>
-
-                                        </div><!-- end .parallax-content -->
-
-                                    </div><!-- end .main-parallax-content -->
-
-                                </div><!-- end .paralax -->
-
-                            </div><!-- end .fullscreen .background .parallax -->
-
-                        </div><!-- end .col-md-12 -->
-
-                        <div class="clearfix"></div>
-
-                        <div class="last-rides">
-
-                            <div class="col-md-12 col-sm-12 col-xs-12">
-
-                                <div class="page-sub-title textcenter">
-                                    <h2>Last rides</h2>
-                                    <div class="line"></div>
-                                </div><!-- end .page-sub-title -->
-
-                            </div>
-
-                            <div class="col-md-12 col-sm-12 col-xs-12">
+                            <div class="rides-list">
 
                                 <article class="ride-box clearfix">
 
@@ -413,7 +395,6 @@
                                                 Read more
                                             </a>
                                         </li>
-
                                     </ul><!-- end .ride-meta -->
 
                                 </article><!-- end .ride-box -->
@@ -453,95 +434,22 @@
 
                                 <div class="clearfix"></div>
 
-                                <div class="read-all pagination-margin">
-                                    <a href="rides.html">Read all</a>
-                                </div>
+                                <div class="post-pagination pagination-margin clearfix">
 
-                            </div><!-- end .col-md-12 col-sm-12 col-xs-12 -->
-
-                        </div><!-- end .last-rides -->
-
-                        <div class="clearfix"></div>
-
-                        <div class="events box-fix">
-
-                            <div class="col-md-12 col-sm-12 col-xs-12">
-
-                                <div class="page-sub-title textcenter">
-                                    <h2>Events</h2>
-                                    <div class="line"></div>
-                                </div><!-- end .page-sub-title -->
-
-                            </div><!-- end .col-md-12 col-sm-12 col-xs-12 -->
-
-                            <div class="col-md-4 col-sm-4 col-xs-12">
-                                <div class="event vertical vertical-two">
-                                    <figure>
-                                        <img src="img/events/event-1.jpg" alt="" >
-                                    </figure>
-                                    <div class="event-info">
-                                        <div class="box event-name">
-                                            <h3>Live concert</h3>
-                                        </div>
-                                        <div class="box event-ride">
-                                            10 ride
-                                        </div>
-                                        <div class="box event-read">
-                                            <a href="#">View all</a>
-                                        </div>
+                                    <div class="next pull-right">
+                                        <a href="#">
+                                            Next
+                                            <i class="fa fa-chevron-right"></i>
+                                        </a>
                                     </div>
-                                </div>
-                            </div>
 
-                            <div class="col-md-8 col-sm-8 col-xs-12">
-                                <div class="event horizontal-one">
-                                    <figure>
-                                        <img src="img/events/event-2.jpg" alt="" >
-                                    </figure>
-                                    <div class="event-info">
-                                        <div class="box event-name">
-                                            <h3>Live concert</h3>
-                                        </div>
-                                        <div class="box event-ride">
-                                            200 ride
-                                        </div>
-                                        <div class="box event-read">
-                                            <a href="#">View all</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                                </div><!-- end .post-pagination -->
 
-                            <div class="col-md-8 col-sm-8 col-xs-12">
-                                <div class="event horizontal-one">
-                                    <figure>
-                                        <img src="img/events/event-3.jpg" alt="" >
-                                    </figure>
-                                    <div class="event-info">
-                                        <div class="box event-name">
-                                            <h3>Live concert</h3>
-                                        </div>
-                                        <div class="box event-ride">
-                                            100 ride
-                                        </div>
-                                        <div class="box event-read">
-                                            <a href="#">View all</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            </div><!-- end .events-list -->
 
-                            <div class="col-md-12 col-sm-12 col-xs-12">
+                        </div><!-- end .page-content -->
 
-                                <div class="read-all pagination-margin">
-                                    <a href="events.html">Show all events</a>
-                                </div>
-
-                            </div><!-- end .col-md-12 col-sm-12 col-xs-12 -->
-
-                        </div><!-- end .events -->
-
-                    </div><!-- end .page-content -->
+                    </div><!-- end .col-md-12 col-sm-12 col-xs-12 -->
 
                 </div><!-- end .row -->
             </div><!-- end .container -->
@@ -578,7 +486,7 @@
                         <form action="" novalidate autocomplete="off" class="idealforms login">
 
                             <div class="log-header">
-                                <span class="log-in">Connexion</span>
+                                <span class="log-in">Log in</span>
                             </div>
 
                             <div class="field">
@@ -592,7 +500,7 @@
                             </div>
 
                             <div class="field buttons">
-                                <button type="submit" class="submit btn green-color">Connexion</button>
+                                <button type="submit" class="submit btn green-color">Log in</button>
                             </div>
 
                             <a href="#" class="log-twitter twitter"><i class="fa fa-twitter"></i>Twitter</a>
@@ -616,51 +524,34 @@
                     </div>
 
                     <div class="modal-body">
-                        <form action="<?php echo Router::url('personne/ajouter'); ?>" method="post" novalidate autocomplete="off" class="idealforms reg">
+                        <form action="" novalidate autocomplete="off" class="idealforms reg">
 
                             <div class="log-header">
-                                <span class="log-in">Inscription</span>
+                                <span class="log-in">Sign up</span>
                             </div>
-                           <div class="form-group" for="civilities">
-                              <select name="SEXE" class="c-select">
-                                  <option selected>Sexe</option>
-                                  <option value="1">Homme</option>
-                                  <option value="0">Femme</option>
-                              </select>
-                            </div>
-                              
-                              <div class="row">
-                                <div class="col-xs-12 col-sm-6 col-md-6">
-                                    <div class="form-group">
-                                        <input type="text" name="NOM" id="first_name" class="form-control input-lg" placeholder="Nom" tabindex="1">
-                                    </div>
-                                </div>
-                                <div class="col-xs-12 col-sm-6 col-md-6">
-                                    <div class="form-group">
-                                        <input type="text" name="PRENOM" id="last_name" class="form-control input-lg" placeholder="Prénom" tabindex="2">
-                                    </div>
-                                </div>
-                            </div>
-  
+
                             <div class="field">
-                                <input name="EMAIL" type="email"  placeholder="E-Mail" required="remplir">
+                                <input name="username" type="text" placeholder="Username">
                                 <span class="error"></span>
                             </div>
 
-                            <div class="row">
-                                <div class="col-xs-12 col-sm-6 col-md-6">
-                                    <div class="form-group">
-                                        <input type="password" name="PASSWORD" id="password" class="form-control input-lg" placeholder="mot de passe" tabindex="5">
-                                    </div>
-                                </div>
-                                <div class="col-xs-12 col-sm-6 col-md-6">
-                                    <div class="form-group">
-                                        <input type="password" name="PASSWORD_CONFIRM" id="password_confirmation" class="form-control input-lg" placeholder="Confirmez mot de passe" tabindex="6">
-                                    </div>
-                                </div>
+                            <div class="field">
+                                <input name="email" type="email"  placeholder="E-Mail">
+                                <span class="error"></span>
                             </div>
+
+                            <div class="field">
+                                <input type="password" name="password" placeholder="Password">
+                                <span class="error"></span>
+                            </div>
+
+                            <div class="field">
+                                <input name="confirmpass" type="password"  placeholder="Password">
+                                <span class="error"></span>
+                            </div>
+
                             <div class="field buttons">
-                                <button type="submit" class="submit btn green-color">Valider</button>
+                                <button type="submit" class="submit btn green-color">Sign up</button>
                             </div>
 
                             <div class="clearfix"></div>
@@ -681,7 +572,7 @@
         <!-- Form -->
         <script type="text/javascript" src="js/jquery.idealforms.min.js"></script>
         <script type="text/javascript" src="js/jquery.idealselect.min.js"></script>
-        <script type="text/javascript" src="js/jquery-ui-1.10.4.custom.min.js"></script>
+        <script type="text/javascript" src="http://code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
         <!-- Menu -->
         <script type="text/javascript" src="js/hoverIntent.js"></script>
         <script type="text/javascript" src="js/superfish.js"></script>

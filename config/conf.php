@@ -23,6 +23,9 @@ Router::connect('','home/index');
 /************* Personne *******************/
 Router::connect('personne/ajouter','personnes/ajouter');
 
+/************* Trajet *******************/
+Router::connect('trajet','trajets/index');
+
 /******************************************/
 Router::connect('cockpit','cockpit/posts/index');
 Router::connect('page/:slug-:id','pages/view/id:([0-9]+)/slug:([a-z0-9\-]+)');
