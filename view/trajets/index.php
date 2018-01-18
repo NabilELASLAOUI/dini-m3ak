@@ -109,21 +109,21 @@
                                         <div class="col-md-4 col-sm-12 col-xs-12">
 
                                             <div class="logo">
-                                                <h1>My ride</h1>
+                                                <h1>dini m3ak</h1>
                                             </div><!-- end .logo -->
 
                                         </div><!-- end .col-sm-4 -->
 
                                         <div class="col-md-8 col-sm-8 col-xs-12">
 
-                                            <nav id="nav" class="main-navigation">
+                                              <nav id="nav" class="main-navigation">
 
                                                 <ul class="navigation">
                                                     <li>
-                                                        <a href="index.html">Home</a>
+                                                        <a href="<?php echo Router::url(''); ?>">Accueil</a>
                                                     </li>
                                                     <li>
-                                                        <a href="rides.html">rides</a>
+                                                        <a href="<?php echo Router::url('trajet'); ?>">Trajet</a>
                                                     </li>
                                                     <li>
                                                         <a href="add-ride.html">Submit</a>
@@ -171,7 +171,7 @@
                                             <div class="col-md-3 col-sm-3 col-xs-12">
                                                 <div class="field">
                                                     <select id="destination" name="destination">
-                                                        <option value="default">From</option>
+                                                        <option value="default">Départ</option>
                                                         <option>Sofia</option>
                                                         <option>Plovdiv</option>
                                                         <option>Hamburg</option>
@@ -187,7 +187,7 @@
 
                                                 <div class="field">
                                                     <select id="destination" name="destination">
-                                                        <option value="default">To</option>
+                                                        <option value="default">Déstination</option>
                                                         <option>Sofia</option>
                                                         <option>Plovdiv</option>
                                                         <option>Hamburg</option>
@@ -203,7 +203,7 @@
                                             <div class="col-md-3 col-sm-3 col-xs-12">
 
                                                 <div class="field">
-                                                    <input name="event" type="text" placeholder="Date" class="datepicker">
+                                                    <input name="event" type="date" placeholder="Date" class="datepicker">
                                                 </div>
 
 
@@ -213,7 +213,7 @@
 
                                                 <div class="field">
                                                     <select id="destination" name="destination">
-                                                        <option value="default">Number of seats</option>
+                                                        <option value="default">Nombre de place</option>
                                                         <option>1</option>
                                                         <option>2</option>
                                                         <option>3</option>
