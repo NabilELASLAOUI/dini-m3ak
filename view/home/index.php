@@ -124,7 +124,7 @@
                                                         <a href="<?php echo Router::url('trajet'); ?>">Trajet</a>
                                                     </li>
                                                     <li>
-                                                        <a href="add-ride.html">Submit</a>
+                                                        <a href="<?php echo Router::url('trajets/ajouter'); ?>">Ajouter un trajet</a>
                                                     </li>
                                                     <li>
                                                         <a href="#">Pages</a>
@@ -139,9 +139,6 @@
                                                                 <a href="single-article.html">Single article</a>
                                                             </li>
                                                         </ul>
-                                                    </li>
-                                                    <li>
-                                                        <a href="blog.html">Blog</a>
                                                     </li>
                                                     <li>
                                                         <a href="contact-page.html">Contact</a>

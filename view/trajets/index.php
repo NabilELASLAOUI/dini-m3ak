@@ -44,7 +44,6 @@
     </head>
 
     <body>
-
         <header class="header">
 
             <div class="top-menu">
@@ -126,7 +125,7 @@
                                                         <a href="<?php echo Router::url('trajet'); ?>">Trajet</a>
                                                     </li>
                                                     <li>
-                                                        <a href="add-ride.html">Submit</a>
+                                                        <a href="<?php echo Router::url('trajets/ajouter'); ?>">Ajouter un trajet</a>
                                                     </li>
                                                     <li>
                                                         <a href="#">Pages</a>
@@ -141,9 +140,6 @@
                                                                 <a href="single-article.html">Single article</a>
                                                             </li>
                                                         </ul>
-                                                    </li>
-                                                    <li>
-                                                        <a href="blog.html">Blog</a>
                                                     </li>
                                                     <li>
                                                         <a href="contact-page.html">Contact</a>
@@ -172,13 +168,9 @@
                                                 <div class="field">
                                                     <select id="destination" name="destination">
                                                         <option value="default">Départ</option>
-                                                        <option>Sofia</option>
-                                                        <option>Plovdiv</option>
-                                                        <option>Hamburg</option>
-                                                        <option>Milano</option>
-                                                        <option>Paris</option>
-                                                        <option>Madrid</option>
-                                                        <option>Berlin</option>
+                                                       <?php  foreach($villes as $v){  ?>
+                                                       <option><?php  echo $v->VILLE_DEPART;  ?></option>
+                                                       <?php  }  ?>
                                                     </select>
                                                 </div>
                                             </div>
@@ -188,13 +180,9 @@
                                                 <div class="field">
                                                     <select id="destination" name="destination">
                                                         <option value="default">Déstination</option>
-                                                        <option>Sofia</option>
-                                                        <option>Plovdiv</option>
-                                                        <option>Hamburg</option>
-                                                        <option>Milano</option>
-                                                        <option>Paris</option>
-                                                        <option>Madrid</option>
-                                                        <option>Berlin</option>
+                                                        <?php  foreach($villes as $v){  ?>
+                                                       <option><?php  echo $v->VILLE_ARRIVE;  ?></option>
+                                                       <?php  }  ?>
                                                     </select>
                                                 </div>
 

@@ -25,6 +25,7 @@ Router::connect('personne/ajouter','personnes/ajouter');
 
 /************* Trajet *******************/
 Router::connect('trajet','trajets/index');
+Router::connect('trajets/ajouter','trajets/ajouter');
 
 /******************************************/
 Router::connect('cockpit','cockpit/posts/index');
